@@ -1,14 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
   <title id="title">Cheila Betina — Caderno técnico</title>
-  <desc id="desc">Banner claro inspirado em um caderno técnico, com grade, série temporal, anotações e a frase Modelar incerteza. Explicar evidências. Construir decisões.</desc>
+  <desc id="desc">Banner claro inspirado em um caderno técnico, com série histórica, origem do forecast, previsão P50, intervalo preditivo P10 a P90 e realizado divergente.</desc>
   <defs>
     <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#f5efdf"/>
       <stop offset="0.55" stop-color="#eee6d3"/>
       <stop offset="1" stop-color="#e7deca"/>
     </linearGradient>
+    <linearGradient id="forecastBand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#bd2b16" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#bd2b16" stop-opacity=".24"/>
+    </linearGradient>
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
       <path d="M32 0H0V32" fill="none" stroke="#6f6a5e" stroke-opacity=".11" stroke-width="1"/>
+    </pattern>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#bd2b16" stroke-opacity=".12" stroke-width="1"/>
     </pattern>
     <filter id="grain" x="0" y="0" width="100%" height="100%">
       <feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="2" seed="17" result="noise"/>
@@ -19,6 +26,7 @@
       <feBlend in="SourceGraphic" in2="faint" mode="multiply"/>
     </filter>
     <clipPath id="frame"><rect width="1200" height="360" rx="18"/></clipPath>
+    <clipPath id="chart"><rect x="0" y="0" width="410" height="184"/></clipPath>
   </defs>
 
   <g clip-path="url(#frame)" filter="url(#grain)">
@@ -43,23 +51,50 @@
 
     <line x1="60" y1="215" x2="110" y2="215" stroke="#bd2b16" stroke-width="4"/>
     <g font-family="Georgia,Times New Roman,serif">
-      <text x="60" y="257" fill="#171713" font-size="22">Modelar incerteza. Explicar evidências.</text>
-      <text x="60" y="289" fill="#171713" font-size="22">Construir decisões.</text>
+      <text x="60" y="257" fill="#171713" font-size="22">Método antes do modelo.</text>
+      <text x="60" y="289" fill="#171713" font-size="22">Evidência antes da decisão.</text>
     </g>
 
-    <g transform="translate(700 92)">
-      <text x="0" y="-15" fill="#bd2b16" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" letter-spacing="1.5">SINAL / INCERTEZA / FEEDBACK</text>
-      <path d="M0 176H410 M0 126H410 M0 76H410 M0 26H410" stroke="#312f2a" stroke-opacity=".13"/>
-      <path d="M0 176V0 M82 176V0 M164 176V0 M246 176V0 M328 176V0 M410 176V0" stroke="#312f2a" stroke-opacity=".10"/>
-      <path d="M0 158 L38 145 L74 153 L112 112 L148 128 L187 66 L225 92 L264 44 L304 81 L345 22 L382 53 L410 36"
-            fill="none" stroke="#171713" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M0 164 L38 154 L74 162 L112 124 L148 139 L187 78 L225 106 L264 57 L304 94 L345 36 L382 68 L410 51"
-            fill="none" stroke="#bd2b16" stroke-width="1.6" stroke-dasharray="5 6" opacity=".9"/>
-      <g fill="#f0e8d6" stroke="#bd2b16" stroke-width="2">
-        <circle cx="112" cy="112" r="5"/><circle cx="187" cy="66" r="5"/><circle cx="264" cy="44" r="5"/><circle cx="345" cy="22" r="5"/>
+    <g transform="translate(700 104)">
+      <text x="0" y="-27" fill="#bd2b16" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" letter-spacing="1.5">SINAL / INCERTEZA / FEEDBACK</text>
+
+      <g clip-path="url(#chart)">
+        <path d="M0 168H410 M0 123H410 M0 78H410 M0 33H410" stroke="#312f2a" stroke-opacity=".13"/>
+        <path d="M0 184V0 M82 184V0 M164 184V0 M246 184V0 M328 184V0 M410 184V0" stroke="#312f2a" stroke-opacity=".10"/>
+
+        <path d="M0 151 L28 139 L54 148 L82 116 L109 129 L137 82 L164 101 L191 61 L218 83 L238 66"
+              fill="none" stroke="#171713" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <line x1="238" y1="0" x2="238" y2="184" stroke="#6d675b" stroke-width="1.3" stroke-dasharray="4 5"/>
+
+        <path d="M238 66 C270 44 300 31 329 35 C357 39 383 24 410 13
+                 L410 122 C383 109 357 102 329 106 C300 110 270 91 238 66 Z"
+              fill="url(#forecastBand)"/>
+        <path d="M238 66 C270 44 300 31 329 35 C357 39 383 24 410 13
+                 L410 122 C383 109 357 102 329 106 C300 110 270 91 238 66 Z"
+              fill="url(#hatch)"/>
+
+        <path d="M238 66 C270 60 300 55 329 62 C357 68 383 56 410 61"
+              fill="none" stroke="#bd2b16" stroke-width="2.6" stroke-linecap="round"/>
+
+        <path d="M238 66 C262 67 283 72 303 70 C326 68 343 87 363 94 C383 101 398 91 410 99"
+              fill="none" stroke="#171713" stroke-width="2.2" stroke-dasharray="5 5" stroke-linecap="round"/>
+        <g fill="#eee6d3" stroke="#171713" stroke-width="1.4">
+          <circle cx="303" cy="70" r="3.5"/><circle cx="363" cy="94" r="3.5"/><circle cx="410" cy="99" r="3.5"/>
+        </g>
       </g>
-      <path d="M313 14L341 20" stroke="#bd2b16"/>
-      <text x="276" y="8" fill="#6d675b" font-family="Bradley Hand,Segoe Print,cursive" font-size="13" transform="rotate(-5 276 8)">validar antes de decidir</text>
+
+      <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="9.5" letter-spacing=".7">
+        <text x="170" y="198" fill="#6d675b">HISTÓRICO</text>
+        <text x="248" y="198" fill="#bd2b16">HORIZONTE DE PREVISÃO</text>
+        <text x="242" y="12" fill="#6d675b" transform="rotate(-90 242 12)">ORIGEM</text>
+        <text x="372" y="52" fill="#bd2b16">P50</text>
+        <text x="351" y="132" fill="#6d675b">P10–P90</text>
+      </g>
+
+      <path d="M334 150 C344 132 350 116 362 99" fill="none" stroke="#bd2b16" stroke-width="1.1"/>
+      <path d="M359 103 L362 99 L363 105" fill="none" stroke="#bd2b16" stroke-width="1.1"/>
+      <text x="273" y="162" fill="#6d675b" font-family="Bradley Hand,Segoe Print,cursive" font-size="13" transform="rotate(-4 273 162)">o erro também informa</text>
     </g>
 
     <g stroke="#171713" stroke-width="1" opacity=".55">
