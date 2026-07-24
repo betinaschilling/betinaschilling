@@ -8,9 +8,9 @@
   <a href="https://betinaschilling.github.io">ComuniDados</a>
 </p>
 
-Construo sistemas analíticos que conectam perguntas relevantes, dados confiáveis, modelagem rigorosa e decisões examináveis. Trabalho na interseção entre estatística, forecasting, machine learning e engenharia analítica.
+Trabalho na interseção entre estatística, engenharia analítica e decisão. Meu foco é transformar dados temporais, sistemas complexos e incerteza em evidências que possam ser examinadas, explicadas e utilizadas.
 
-> Método antes do modelo. Evidência antes da decisão.
+> Modelar incerteza. Explicar evidências. Construir decisões.
 
 ## Sistema de trabalho
 
