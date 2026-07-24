@@ -1,54 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
-  <title id="title">Cheila Betina — Data Science, Forecasting and Analytical Systems</title>
-  <desc id="desc">Dark technical banner with a time-series signal, grid, analytical nodes and the phrase model uncertainty, explain evidence, build decisions.</desc>
+  <title id="title">Cheila Betina — Caderno técnico</title>
+  <desc id="desc">Banner claro inspirado em um caderno técnico, com grade, série temporal, anotações e a frase Método antes do modelo. Evidência antes da decisão.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#090d18"/>
-      <stop offset="0.55" stop-color="#11172a"/>
-      <stop offset="1" stop-color="#071d22"/>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5efdf"/>
+      <stop offset="0.55" stop-color="#eee6d3"/>
+      <stop offset="1" stop-color="#e7deca"/>
     </linearGradient>
-    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#8b5cf6"/>
-      <stop offset="0.52" stop-color="#38bdf8"/>
-      <stop offset="1" stop-color="#2dd4bf"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="80%" cy="20%" r="60%">
-      <stop offset="0" stop-color="#2dd4bf" stop-opacity=".18"/>
-      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94a3b8" stroke-opacity=".08" stroke-width="1"/>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#6f6a5e" stroke-opacity=".11" stroke-width="1"/>
     </pattern>
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="2" seed="17" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="gray"/>
+      <feComponentTransfer in="gray" result="faint">
+        <feFuncA type="table" tableValues="0 .045"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="faint" mode="multiply"/>
     </filter>
+    <clipPath id="frame"><rect width="1200" height="360" rx="18"/></clipPath>
   </defs>
 
-  <rect width="1200" height="360" rx="24" fill="url(#bg)"/>
-  <rect width="1200" height="360" rx="24" fill="url(#glow)"/>
-  <rect x="20" y="20" width="1160" height="320" rx="18" fill="url(#grid)" stroke="#94a3b8" stroke-opacity=".12"/>
+  <g clip-path="url(#frame)" filter="url(#grain)">
+    <rect width="1200" height="360" fill="url(#paper)"/>
+    <rect width="1200" height="360" fill="url(#grid)"/>
 
-  <g opacity=".8">
-    <path d="M690 255 L735 240 L770 252 L815 190 L850 214 L892 135 L930 174 L970 105 L1010 146 L1055 82 L1090 108"
-          fill="none" stroke="url(#signal)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)"/>
-    <path d="M690 274 H1110" stroke="#94a3b8" stroke-opacity=".16"/>
-    <path d="M690 224 H1110 M690 174 H1110 M690 124 H1110" stroke="#94a3b8" stroke-opacity=".08"/>
-    <g fill="#0f172a" stroke="#38bdf8" stroke-width="2">
-      <circle cx="815" cy="190" r="6"/><circle cx="892" cy="135" r="6"/><circle cx="970" cy="105" r="6"/><circle cx="1055" cy="82" r="6"/>
+    <path d="M42 42H1158 M42 318H1158" stroke="#1d1d19" stroke-width="1"/>
+    <path d="M42 42V318 M1158 42V318" stroke="#1d1d19" stroke-opacity=".22"/>
+    <path d="M654 42V318" stroke="#1d1d19" stroke-opacity=".18"/>
+
+    <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace">
+      <text x="58" y="70" fill="#bd2b16" font-size="13" letter-spacing="2.4">CADERNO TÉCNICO · 01</text>
+      <text x="1010" y="70" fill="#3d3b35" font-size="12" letter-spacing="1.3">STATUS · ATIVO</text>
     </g>
-  </g>
 
-  <g font-family="Inter,Segoe UI,Arial,sans-serif">
-    <text x="72" y="90" fill="#2dd4bf" font-size="15" letter-spacing="4">DATA · EVIDENCE · DECISION</text>
-    <text x="68" y="154" fill="#f8fafc" font-size="48" font-weight="700" letter-spacing="-1">CHEILA BETINA</text>
-    <text x="70" y="198" fill="#cbd5e1" font-size="23" letter-spacing=".5">Data Science · Forecasting · Analytical Systems</text>
-    <text x="70" y="260" fill="#94a3b8" font-size="17">Modelar incerteza  ·  Explicar evidências  ·  Construir decisões</text>
-  </g>
+    <g font-family="Georgia,Times New Roman,serif">
+      <text x="58" y="145" fill="#171713" font-size="52">Cheila Betina</text>
+    </g>
+    <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace">
+      <text x="61" y="183" fill="#4f4b42" font-size="16" letter-spacing="1.6">DATA SCIENCE · FORECASTING · ANALYTICAL SYSTEMS</text>
+    </g>
 
-  <g transform="translate(70 296)">
-    <rect width="10" height="10" rx="2" fill="#8b5cf6"/>
-    <rect x="22" width="10" height="10" rx="2" fill="#38bdf8"/>
-    <rect x="44" width="10" height="10" rx="2" fill="#2dd4bf"/>
+    <line x1="60" y1="215" x2="110" y2="215" stroke="#bd2b16" stroke-width="4"/>
+    <g font-family="Georgia,Times New Roman,serif">
+      <text x="60" y="257" fill="#171713" font-size="24">Método antes do modelo.</text>
+      <text x="60" y="289" fill="#171713" font-size="24">Evidência antes da decisão.</text>
+    </g>
+
+    <g transform="translate(700 92)">
+      <text x="0" y="-15" fill="#bd2b16" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" letter-spacing="1.5">SINAL / INCERTEZA / FEEDBACK</text>
+      <path d="M0 176H410 M0 126H410 M0 76H410 M0 26H410" stroke="#312f2a" stroke-opacity=".13"/>
+      <path d="M0 176V0 M82 176V0 M164 176V0 M246 176V0 M328 176V0 M410 176V0" stroke="#312f2a" stroke-opacity=".10"/>
+      <path d="M0 158 L38 145 L74 153 L112 112 L148 128 L187 66 L225 92 L264 44 L304 81 L345 22 L382 53 L410 36"
+            fill="none" stroke="#171713" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M0 164 L38 154 L74 162 L112 124 L148 139 L187 78 L225 106 L264 57 L304 94 L345 36 L382 68 L410 51"
+            fill="none" stroke="#bd2b16" stroke-width="1.6" stroke-dasharray="5 6" opacity=".9"/>
+      <g fill="#f0e8d6" stroke="#bd2b16" stroke-width="2">
+        <circle cx="112" cy="112" r="5"/><circle cx="187" cy="66" r="5"/><circle cx="264" cy="44" r="5"/><circle cx="345" cy="22" r="5"/>
+      </g>
+      <path d="M313 14L341 20" stroke="#bd2b16"/>
+      <text x="276" y="8" fill="#6d675b" font-family="Bradley Hand,Segoe Print,cursive" font-size="13" transform="rotate(-5 276 8)">validar antes de decidir</text>
+    </g>
+
+    <g stroke="#171713" stroke-width="1" opacity=".55">
+      <path d="M25 58H59 M42 41V75"/>
+      <circle cx="42" cy="58" r="7" fill="none"/>
+      <path d="M1141 300H1175 M1158 283V317"/>
+      <circle cx="1158" cy="300" r="7" fill="none"/>
+    </g>
   </g>
 </svg>
