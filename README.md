@@ -23,39 +23,56 @@ flowchart LR
     E -. "feedback" .-> A
 ```
 
-| Etapa | Pergunta de controle |
+| Etapa | Verificação técnica | Entrega para decisão |
+|---|---|---|
+| Problema | Decisão, população, unidade de análise, target ou estimando, horizonte e critérios de sucesso. | Pergunta verificável e definição explícita de valor. |
+| Dados confiáveis | Granularidade, chaves, cobertura, qualidade de mensuração, disponibilidade point-in-time e leakage. | Base analítica rastreável, semanticamente correta e adequada ao uso. |
+| Modelos e inferência | Baseline, pressupostos, loss, particionamento, validação temporal ou por grupos, ajuste e complexidade. | Alternativas comparáveis e desempenho estimado em condições realistas. |
+| Evidências | Generalização fora da amostra, calibração, estabilidade, incerteza, heterogeneidade e sensibilidade. | Benefícios, limites e riscos apresentados na escala da decisão. |
+| Decisão | Custo dos erros, thresholds, restrições operacionais, responsabilidade, monitoramento e feedback. | Recomendação proporcional à evidência, com critérios de acompanhamento. |
+
+O ciclo não termina na entrega do modelo: decisões produzem resultados, novos dados, riscos e perguntas melhores.
+
+## Especialidades
+
+- Forecasting e séries temporais — demanda, receita, hierarquias, reconciliação, backtesting e previsões probabilísticas.
+- Estatística e causalidade — regressão, experimentação, inferência bayesiana, desenho de estudos e análise de sensibilidade.
+- Machine learning — modelos supervisionados e não supervisionados, feature engineering, calibração, explicabilidade e validação.
+- Engenharia analítica — modelagem de dados, SQL, qualidade, pipelines, Spark, Databricks, BigQuery e reprodutibilidade.
+- Sistemas de decisão — simulação, otimização, cenários e tradução de evidências para negócio.
+
+## Aplicações de negócio
+
+| Contexto | Contribuição analítica |
 |---|---|
-| Problema | Qual decisão precisa ser apoiada e o que seria uma resposta útil? |
-| Dados confiáveis | A população, a granularidade, a semântica e o tempo estão corretos? |
-| Modelos e inferência | O método responde à pergunta sem ultrapassar o que os dados permitem? |
-| Evidências | O resultado é válido, estável, reproduzível e acompanhado de incerteza? |
-| Decisão | A recomendação é proporcional à força da evidência e aos riscos? |
+| Planejamento de demanda | Forecasts temporais e hierárquicos, cenários e quantificação da incerteza. |
+| Comercial, marketing e pricing | Segmentação, avaliação de impacto, elasticidades, sinais de demanda e priorização. |
+| Gestão de risco e desempenho | Métricas calibradas, thresholds, stress tests e custo esperado dos erros. |
+| Produtos de dados | Bases confiáveis, métricas governadas, modelos reproduzíveis e decisões monitoráveis. |
 
-O feedback fecha o ciclo: decisões produzem resultados, novos dados, novos riscos e perguntas melhores.
-
-## Campos de investigação
-
-- Forecasting e séries temporais — demanda, receita, hierarquias, backtesting e incerteza.
-- Estatística e causalidade — regressão, experimentação, inferência bayesiana e desenho de estudos.
-- Machine learning — modelos supervisionados, segmentação, validação e explicabilidade.
-- Engenharia analítica — SQL, qualidade, pipelines, Spark, Databricks e reprodutibilidade.
-- Sistemas de decisão — simulação, otimização e tradução de evidências para negócio.
+Um modelo não gera valor apenas por prever bem. Ele precisa chegar à decisão correta, no tempo necessário, com custo, risco e limitações compreendidos.
 
 ## Sistemas vivos
 
 | Sistema | Função |
 |---|---|
-| [Data Science Workbench](https://github.com/betinaschilling/data-science-workbench) | Infraestrutura metodológica: projetos, agentes, documentação e habilidades portáveis para diferentes LLMs. |
+| [Data Science Workbench](https://github.com/betinaschilling/data-science-workbench) | Infraestrutura metodológica para projetos, agentes, documentação e habilidades portáveis entre diferentes LLMs. |
 | [ComuniDados](https://betinaschilling.github.io) | Publicação independente sobre dados, inteligência artificial, tecnologia e sociedade. |
 
-## Ferramentas
+## Stack técnica
 
-`Python` · `SQL` · `R` · `Pandas` · `Statsmodels` · `Scikit-learn` · `CatBoost` · `LightGBM` · `Spark` · `Databricks` · `BigQuery` · `Airflow` · `Power BI`
+| Camada | Tecnologias e métodos |
+|---|---|
+| Análise e inferência | Python, Pandas, NumPy, SciPy, Statsmodels e inferência bayesiana. |
+| Machine learning e forecast | Scikit-learn, CatBoost, LightGBM, ARIMA, ETS, Prophet, modelos fundacionais e validação walk-forward. |
+| Dados e plataforma | SQL, Spark, Databricks, BigQuery, GCP, Airflow e modelagem dimensional. |
+| Decisão e comunicação | Simulação, otimização, SHAP, análise de cenários, Power BI e Tableau. |
 
 ## Princípios
 
 - preservar a ordem temporal e impedir vazamento;
 - separar descrição, previsão, inferência, causalidade e prescrição;
+- comparar contra baselines e simular o uso real;
 - comunicar magnitude, incerteza, limitações e risco;
 - construir análises reproduzíveis e decisões auditáveis;
 - tratar qualidade como parte do processo, não como inspeção final.

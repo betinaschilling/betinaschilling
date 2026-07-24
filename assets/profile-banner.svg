@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
   <title id="title">Cheila Betina — Caderno técnico</title>
-  <desc id="desc">Banner claro inspirado em um caderno técnico, com grade, série temporal, anotações e a frase Método antes do modelo. Evidência antes da decisão.</desc>
+  <desc id="desc">Banner claro inspirado em um caderno técnico, com grade, série temporal, anotações e a frase Modelar incerteza. Explicar evidências. Construir decisões.</desc>
   <defs>
     <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#f5efdf"/>
@@ -43,8 +43,8 @@
 
     <line x1="60" y1="215" x2="110" y2="215" stroke="#bd2b16" stroke-width="4"/>
     <g font-family="Georgia,Times New Roman,serif">
-      <text x="60" y="257" fill="#171713" font-size="24">Método antes do modelo.</text>
-      <text x="60" y="289" fill="#171713" font-size="24">Evidência antes da decisão.</text>
+      <text x="60" y="257" fill="#171713" font-size="22">Modelar incerteza. Explicar evidências.</text>
+      <text x="60" y="289" fill="#171713" font-size="22">Construir decisões.</text>
     </g>
 
     <g transform="translate(700 92)">
