@@ -1,82 +1,69 @@
-<p align="center">
-  <img src="./assets/profile-banner.svg" alt="Cheila Betina — Caderno técnico de Data Science, Forecasting e Sistemas Analíticos" width="100%">
-</p>
+<div align="center">
 
-<p align="center">
-  <a href="https://github.com/betinaschilling/data-science-workbench">Data Science Workbench</a>
-  ·
-  <a href="https://betinaschilling.github.io">ComuniDados</a>
-</p>
+# `betina@comunidados:~$ whoami`
 
-Trabalho na interseção entre estatística, engenharia analítica e decisão. Meu foco é transformar dados temporais, sistemas complexos e incerteza em evidências que possam ser examinadas, explicadas e utilizadas.
+### Data Scientist · Forecasting · Time Series · Retail AI
 
-> Modelar incerteza. Explicar evidências. Construir decisões.
+`Python` · `SQL` · `R` · `Spark` · `Databricks` · `GCP` · `CatBoost` · `Time Series`
 
-## Sistema de trabalho
+</div>
 
-```mermaid
-flowchart LR
-    A["Problema"] --> B["Dados confiáveis"]
-    B --> C["Modelos e inferência"]
-    C --> D["Evidências"]
-    D --> E["Decisão"]
-    E -. "feedback" .-> A
+```text
+betina@comunidados:~$ ./about
+
+role       Data Scientist
+focus      Forecasting · Time Series · Machine Learning · Retail
+building   analytical systems that connect prediction to decision
+studying   statistics · causal inference · probabilistic forecasting
 ```
 
-| Etapa | Verificação técnica | Entrega para decisão |
-|---|---|---|
-| Problema | Decisão, população, unidade de análise, target ou estimando, horizonte e critérios de sucesso. | Pergunta verificável e definição explícita de valor. |
-| Dados confiáveis | Granularidade, chaves, cobertura, qualidade de mensuração, disponibilidade point-in-time e leakage. | Base analítica rastreável, semanticamente correta e adequada ao uso. |
-| Modelos e inferência | Baseline, pressupostos, loss, particionamento, validação temporal ou por grupos, ajuste e complexidade. | Alternativas comparáveis e desempenho estimado em condições realistas. |
-| Evidências | Generalização fora da amostra, calibração, estabilidade, incerteza, heterogeneidade e sensibilidade. | Benefícios, limites e riscos apresentados na escala da decisão. |
-| Decisão | Custo dos erros, thresholds, restrições operacionais, responsabilidade, monitoramento e feedback. | Recomendação proporcional à evidência, com critérios de acompanhamento. |
+## `~/work`
 
-O ciclo não termina na entrega do modelo: decisões produzem resultados, novos dados, riscos e perguntas melhores.
+I work at the intersection of statistics, analytical engineering and decision-making.
 
-## Especialidades
+My main interests are demand forecasting, temporal validation, hierarchical forecasting, probabilistic models, causal inference and the translation of model performance into business decisions.
 
-- Forecasting e séries temporais — demanda, receita, hierarquias, reconciliação, backtesting e previsões probabilísticas.
-- Estatística e causalidade — regressão, experimentação, inferência bayesiana, desenho de estudos e análise de sensibilidade.
-- Machine learning — modelos supervisionados e não supervisionados, feature engineering, calibração, explicabilidade e validação.
-- Engenharia analítica — modelagem de dados, SQL, qualidade, pipelines, Spark, Databricks, BigQuery e reprodutibilidade.
-- Sistemas de decisão — simulação, otimização, cenários e tradução de evidências para negócio.
+> Model uncertainty. Explain evidence. Build decisions.
 
-## Aplicações de negócio
+## `~/stack`
 
-| Contexto | Contribuição analítica |
+| Layer | Tools & methods |
 |---|---|
-| Planejamento de demanda | Forecasts temporais e hierárquicos, cenários e quantificação da incerteza. |
-| Comercial, marketing e pricing | Segmentação, avaliação de impacto, elasticidades, sinais de demanda e priorização. |
-| Gestão de risco e desempenho | Métricas calibradas, thresholds, stress tests e custo esperado dos erros. |
-| Produtos de dados | Bases confiáveis, métricas governadas, modelos reproduzíveis e decisões monitoráveis. |
+| Languages | Python · SQL · R |
+| Forecast & ML | CatBoost · LightGBM · ARIMA · ETS · Prophet · Foundation Models |
+| Data | Pandas · NumPy · Spark · Databricks · BigQuery |
+| Cloud & orchestration | GCP · Airflow |
+| Decision & explainability | SHAP · Simulation · Optimization · Scenario Analysis |
+| Visualization | Power BI · Tableau · Streamlit |
 
-Um modelo não gera valor apenas por prever bem. Ele precisa chegar à decisão correta, no tempo necessário, com custo, risco e limitações compreendidos.
+## `~/projects`
 
-## Sistemas vivos
+### Data Science Workbench
+Methodological infrastructure for data science projects, agents, documentation and reproducible analytical workflows.
 
-| Sistema | Função |
-|---|---|
-| [Data Science Workbench](https://github.com/betinaschilling/data-science-workbench) | Infraestrutura metodológica para projetos, agentes, documentação e habilidades portáveis entre diferentes LLMs. |
-| [ComuniDados](https://betinaschilling.github.io) | Publicação independente sobre dados, inteligência artificial, tecnologia e sociedade. |
+### ComuniDados
+Independent writing about data, artificial intelligence, technology and society.
 
-## Stack técnica
+## `~/principles`
 
-| Camada | Tecnologias e métodos |
-|---|---|
-| Análise e inferência | Python, Pandas, NumPy, SciPy, Statsmodels e inferência bayesiana. |
-| Machine learning e forecast | Scikit-learn, CatBoost, LightGBM, ARIMA, ETS, Prophet, modelos fundacionais e validação walk-forward. |
-| Dados e plataforma | SQL, Spark, Databricks, BigQuery, GCP, Airflow e modelagem dimensional. |
-| Decisão e comunicação | Simulação, otimização, SHAP, análise de cenários, Power BI e Tableau. |
+```text
+01  preserve temporal order
+02  prevent leakage
+03  compare against meaningful baselines
+04  quantify uncertainty
+05  make assumptions explicit
+06  build reproducible analyses
+07  treat data quality as part of the model
+```
 
-## Princípios
-
-- preservar a ordem temporal e impedir vazamento;
-- separar descrição, previsão, inferência, causalidade e prescrição;
-- comparar contra baselines e simular o uso real;
-- comunicar magnitude, incerteza, limitações e risco;
-- construir análises reproduzíveis e decisões auditáveis;
-- tratar qualidade como parte do processo, não como inspeção final.
+## `$ sudo ./data-quality-check`
 
 <p align="center">
-  <a href="https://betinaschilling.github.io"><i>O código está aqui. As perguntas continuam no ComuniDados.</i></a>
+  <img src="./assets/kennie-status.svg" width="760" alt="CidadaoKennie Data Quality Officer">
 </p>
+
+<div align="center">
+
+[`ComuniDados`](https://betinaschilling.github.io) · [`GitHub`](https://github.com/betinaschilling)
+
+</div>
